@@ -36,7 +36,7 @@ void Server::onClientMessageReceived(QString message)
 {
     RemoteClient *client = qobject_cast<RemoteClient*>(sender());
 
-    sendMessage(message);
+    sendMessage(client->nickName()+" : "+message);
 
     emit messageReceived(client->nickName(), message);
 }
