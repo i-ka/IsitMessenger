@@ -1,4 +1,5 @@
 #include "Server.hpp"
+
 #include <QDebug>
 #include <QTcpServer>
 #include <QTcpSocket>

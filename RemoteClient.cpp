@@ -30,7 +30,7 @@ void RemoteClient::onReadyRead()
     } else if (message.startsWith("setNickname:")) {
         QString nick = message.mid(12);
         setNickname(nick);
-        sendMessage("nickNameStatus:1");
+         m_socket->write("nickNameStatus:1");
     }
 }
 
